@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { ThrowStmt } from '@angular/compiler';
 import { environment } from "../environments/environment";
 import { User } from "./user";
+import { Repository } from './repository';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserHttpServiceService {
   user : User;
+  repository: Repository;
 
   constructor(private http:HttpClient) { }
 
@@ -16,8 +17,8 @@ export class UserHttpServiceService {
     interface  Results{
       created_at: any;
       avatar_url: any;
-      followers_url: any;
-      following_url: any;
+      // followers_url: any;
+      // following_url: any;
       repos_url: any;
       login: any;
       public_repos: any;
