@@ -12,4 +12,8 @@ export class MainPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  searchUser(searchTerm){
+    console.log(searchTerm)
+  }
+
 }

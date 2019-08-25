@@ -17,7 +17,7 @@
 
   <!-- .............................................END OF NAVBAR................... -->
 <!-- ..........................................Inside Content....................................  -->
-<app-input-search-form></app-input-search-form>
+<app-input-search-form (emitSearch)="searchUser($event)" ></app-input-search-form>
 
 
   <!--Footer-->
@@ -74,6 +74,6 @@
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2019 Copyright:
+      &copy; 2019 Copyright:
       <a href="#" target="_blank"> Ndundiro Kamau </a>
     </div>
