@@ -8,8 +8,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" routerLink="home">One<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" routerLink="/stickers">Two</a>
+          <a class="nav-item nav-link active" routerLink="main-page" routerLinkActive='active'>User<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" routerLink="/repository" routerLinkActive='active'>Repositories</a>
         </div>
       </div>
     </nav>
@@ -18,6 +18,24 @@
   <!-- .............................................END OF NAVBAR................... -->
 <!-- ..........................................Inside Content....................................  -->
 <app-input-search-form (emitSearch)="searchUser($event)" ></app-input-search-form>
+
+
+<div class="row container">
+  <div class="col-md-4">
+    <!-- {{name.avatar_url}} -->
+  </div>
+  <div class="col-md-1"></div>
+  <div class="col-md-7">
+    <div class="card">
+      <h4 class="card-header">User Found</h4>
+      <div>Repositories</div>
+      <div>Projects</div>
+      <div>Followers</div>
+      <div>Following</div>
+
+    </div>
+  </div>
+</div>
 
 
   <!--Footer-->
@@ -77,3 +95,4 @@
       &copy; 2019 Copyright:
       <a href="#" target="_blank"> Ndundiro Kamau </a>
     </div>
+  
