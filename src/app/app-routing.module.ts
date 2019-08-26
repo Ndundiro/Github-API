@@ -8,6 +8,7 @@ import { RepositoryComponent } from "./repository/repository.component"
 const routes: Routes = [
  { path: "main-page", component: MainPageComponent },
  { path: "repository", component:RepositoryComponent},
+ { path: '', redirectTo:"/main-page", pathMatch:"full"}
 ];
 
 @NgModule({

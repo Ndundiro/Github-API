@@ -23,14 +23,14 @@ export class UserHttpServiceService {
       followers:any;
       following:any;
       login: any;
-      public_repos: any;
       // ANOTHER TRY AT THIS....HOPE IT WORKS
        name: string,
         description: string, 
         html_url: string, 
         clone_url: string, 
         homepage:string,
-        bio:string 
+        bio:string,
+        public_repos: number
     }
 
     let searchEndpoint= "https://api.github.com/users/"+searchTerm+"?access_token="+environment.GITHUB_API;
