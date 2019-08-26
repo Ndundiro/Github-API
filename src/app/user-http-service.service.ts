@@ -17,9 +17,11 @@ export class UserHttpServiceService {
     interface  Results{
       created_at: any;
       avatar_url: any;
-      // followers_url: any;
-      // following_url: any;
+      followers_url: any;
+      following_url: any;
       repos_url: any;
+      followers:any;
+      following:any;
       login: any;
       public_repos: any;
       // ANOTHER TRY AT THIS....HOPE IT WORKS
@@ -35,7 +37,7 @@ export class UserHttpServiceService {
     let promise = new Promise((resolve, reject)=>{
       this.http.get<Results>(searchEndpoint).toPromise().then(
         (results)=>{
-          this.user = results;
+           this.user = results;
           // do something
           console.log(results)
           resolve()

@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { InputSearchFormComponent } from './input-search-form/input-search-form.component';
 import { RepositoryComponent } from './repository/repository.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     InputSearchFormComponent,
-    RepositoryComponent
+    RepositoryComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
