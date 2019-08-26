@@ -22,17 +22,18 @@
 
 <div class="row container">
   <div class="col-md-4">
-     <!-- {{name.avatar_url}}  -->
+     <!-- {{name.avatar_url}}   -->
   </div>
   <div class="col-md-1"></div>
   <div class="col-md-7">
     <div class="card">
       <h4 class="card-header">User Found</h4>
-      <div>Repositories {{user.description}} </div>
-      <div>Projects{{user.created_at}}</div>
-      <div>Followers{{user.followers}}</div>
-      <div>Following</div>
+      <div>No of public Repositories: {{user.public_repos}} </div>
+      <div>Joined On:{{user.created_at}}</div>
+      <div>Followers:{{user.followers}}</div>
+      <div>Following:{{user.following}}</div>
 
+      {{user.login}}
     </div>
   </div>
 </div>
