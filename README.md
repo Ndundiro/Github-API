@@ -1,7 +1,7 @@
 ## Author Ndundiro Kamau, August 23rd 2019
 
 ## Description
-An angular application that allows user to search for their git hub accounts.On submitting a name through the given form,the app outputsn the users github information.
+An angular application that allows user to search for their git hub accounts.On submitting a name through the given form,the app outputs the users github information.
 
 ## Screenshot
 
@@ -33,7 +33,7 @@ Run ng build to build the project. The build artifacts will be stored in the dis
 * Bootstrap
 
 ## Known Bugs
-The upvote logic does not work as expected.It does not highlight the most upvoted quote.
+The application does not display the list of repositories as expected.
 
 ## Support and Contact Details
 For any comments,suggestions,feedback or inquiries, contact me via email: ndundirokamau@gmail.com
