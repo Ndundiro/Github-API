@@ -12,9 +12,7 @@ export class MainPageComponent implements OnInit {
 // user : User = this.UserHttpService.user;
   constructor(public UserHttpService:UserHttpServiceService) { }
 
-  ngOnInit() {
-  }
-
+  
   searchUser(searchTerm){
     this.UserHttpService.searchUser(searchTerm).then(
       (results)=>{
@@ -25,5 +23,10 @@ export class MainPageComponent implements OnInit {
       }
     )
   }
+
+  ngOnInit() {
+    this.searchUser("Ndundiro")
+  }
+
 
 }
