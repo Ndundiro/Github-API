@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { environment } from "../environments/environment";
 import { User } from "./user";
-import { Repository } from './repository';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserHttpServiceService {
   user : User;
-  repository: Repository;
+  // repos: Repository;
 
   constructor(private http:HttpClient) { }
 
@@ -29,7 +29,8 @@ export class UserHttpServiceService {
         description: string, 
         html_url: string, 
         clone_url: string, 
-        homepage:string
+        homepage:string,
+        bio:string 
     }
 
     let searchEndpoint= "https://api.github.com/users/"+searchTerm+"?access_token="+environment.GITHUB_API;

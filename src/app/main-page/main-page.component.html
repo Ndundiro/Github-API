@@ -1,61 +1,30 @@
-
-<!-- ..................................NAVbAR....................... -->
-<!-- <div class="container-fliud">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" routerLink="/home"><b>GitHub</b></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" routerLink="main-page" routerLinkActive='active'>User<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" routerLink="/repository" routerLinkActive='active'>Repositories</a>
-        </div>
-      </div>
-    </nav>
-  </div> -->
-
-  <!-- .............................................END OF NAVBAR................... -->
-<!-- ..........................................Inside Content....................................  -->
-<app-input-search-form (emitSearch)="searchUser($event)" ></app-input-search-form>
-
-
-<div class="row container">
+<!-- <app-input-search-form (emitSearch)="searchUser($event)" ></app-input-search-form> -->
+<div class="main row container">
   <div class="col-md-4">
-    User Name:{{user.login}}
-    <!-- <img src="https://images.unsplash.com/photo-1566763107836-b20024cd76e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">  -->
-    <img src="{{user.avatar_url}}" class="rounded-circle" >
+    <img src="{{user.avatar_url}}" >
+    <!-- User Name:{{user.login}}
+    <div>Bio:{{user.bio}}</div> -->
   </div>
-  <div class="col-md-1"></div>
-  <div class="col-md-7">
-    <div class="card">
-      <h4 class="card-header">User Found</h4>
-      <div>No of public Repositories: {{user.public_repos}} </div>
-      <div>Joined On:{{user.created_at}}</div>
-      <div>Followers:{{user.followers}}</div>
-      <div>Following:{{user.following}}</div>
+  <div class="col-md-2"></div>
+  <div class="col-md-6">
+      <app-input-search-form (emitSearch)="searchUser($event)" ></app-input-search-form>
+    <div class="one card">
+      <h4 class="card-header">User Found:{{user.login}}</h4>
+      <div class="mb-4 "> <i class="fa fa-folder-open"></i> No of public Repositories: {{user.public_repos}} </div>
+      <div class="mb-4"> <i class="fa fa-calendar"></i> Joined On:{{user.created_at}}</div>
+      <div class="mb-4"> <i class="fa fa-users"></i> Followers:{{user.followers}}</div>
+      <div class="mb-4 pl-2"> <i class="fa fa-user"></i> Following:{{user.following}}</div
+
+>
     </div>
   </div>
 </div>
 
 
-  <!--Footer-->
   <footer class="page-footer text-center font-small mt-4 wow fadeIn">
-
-    <!--Call to action-->
-    <div class="pt-4 scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}" >
-      <a class="btn btn-outline-white" href="#" role="button" >Scroll to Top
-        <i class="fas fa-arrow-up"></i>
-      </a>
-      <a class="btn btn-outline-white"  href="https://github.com//" target="_blank" role="button">Visit on Github
-        <i class="fas fa-rocket"></i>
-      </a>
-    </div>
-    <!--/.Call to action-->
 
     <hr class="my-4">
 
-    <!-- Social icons -->
     <div class="pb-4">
       <a href="https://www.facebook.com/" target="_blank">
         <i class="fa fa-facebook-f mr-3"></i>
@@ -69,29 +38,8 @@
         <i class="fa fa-github mr-3"></i>
       </a>
 
-      <!-- <a href="https://www.youtube.com/" target="_blank">
-        <i class="fab fa-youtube mr-3"></i>
-      </a>
-
-      <a href="https://plus.google.com/" target="_blank">
-        <i class="fab fa-google-plus-g mr-3"></i>
-      </a>
-
-      <a href="https://dribbble.com/" target="_blank">
-        <i class="fab fa-dribbble mr-3"></i>
-      </a>
-
-      <a href="https://pinterest.com/" target="_blank">
-        <i class="fab fa-pinterest mr-3"></i>
-      </a>
-
-      <a href="http://codepen.io/" target="_blank">
-        <i class="fab fa-codepen mr-3"></i>
-      </a> -->
     </div>
-    <!-- Social icons -->
-
-    <!--Copyright-->
+    
     <div class="footer-copyright py-3">
       &copy; 2019 Copyright:
       <a href="#" target="_blank"> Ndundiro Kamau </a>

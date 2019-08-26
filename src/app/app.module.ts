@@ -10,6 +10,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { InputSearchFormComponent } from './input-search-form/input-search-form.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { DatePipe } from './date.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     MainPageComponent,
     InputSearchFormComponent,
     RepositoryComponent,
-    NavBarComponent
+    NavBarComponent,
+    DatePipe
   ],
   imports: [
     BrowserModule,
