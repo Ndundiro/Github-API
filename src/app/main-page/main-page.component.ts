@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserHttpServiceService} from "../user-http-service.service";
-import { RepoHttpServiceService } from "../repo-http-service.service";
+// import { RepoHttpServiceService } from "../repo-http-service.service";
 import { User } from "../user";
 import { Repository } from '../repository';
 
@@ -13,7 +13,7 @@ export class MainPageComponent implements OnInit {
   user: User;
   repos: Repository;
 // user : User = this.UserHttpService.user;
-  constructor(public UserHttpService:UserHttpServiceService)  { }
+  // constructor(public UserHttpService:UserHttpServiceService)  { }
   // ,public RepoHttpService:RepoHttpServiceService-->
   // searchRepo(searchTerm){
   //   this.RepoHttpService.searchRepo(searchTerm).then(
@@ -26,7 +26,7 @@ export class MainPageComponent implements OnInit {
   //     }
   //   )
   // }
-
+  constructor(public UserHttpService:UserHttpServiceService)  { }
   
   searchUser(searchTerm){
     this.UserHttpService.searchUser(searchTerm).then(

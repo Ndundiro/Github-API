@@ -12,19 +12,19 @@
     <div class="one card">
       <h4 class="card-header">User Found:{{user.login}}</h4>
       <div class="mb-4 "> <i class="fa fa-folder-open"></i> No of public Repositories: {{user.public_repos}} </div>
-      <div class="mb-4"> <i class="fa fa-calendar"></i> Joined On:{{user.created_at|date}}</div>
+      <!-- <div class="mb-4"> <i class="fa fa-calendar"></i> Joined On:{{user.created_at|date}}</div> -->
       <div class="mb-4"> <i class="fa fa-users"></i> Followers:{{user.followers}}</div>
       <div class="mb-4 pl-2"> <i class="fa fa-user"></i> Following:{{user.following}}</div>
-      <p appHighlight> <strong>Join Date:</strong> {{user.created_at |date}}</p>
+      <!-- <p appHighlight> <strong>Join Date:</strong> {{user.created_at |date}}</p> -->
       <p><a href="{{user.html_url}}" target="_blank">
-        <button type="button" class="btn btn-dark"> View Profile on Github</button></a>
+        <button type="button" class="btn-sm btn-dark"> View on Github</button></a>
           </p>
     </div>
   </div>
 </div>
 </div>
 
-
+<!-- My footer -->
   <footer class="page-footer text-center font-small mt-4 wow fadeIn">
 
     <hr class="my-4">
