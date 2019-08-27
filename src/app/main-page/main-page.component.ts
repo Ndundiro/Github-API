@@ -13,26 +13,26 @@ export class MainPageComponent implements OnInit {
   user: User;
   repos: Repository;
 // user : User = this.UserHttpService.user;
-  constructor(public UserHttpService:UserHttpServiceService,public RepoHttpService:RepoHttpServiceService) { }
-
-  searchRepo(searchTerm){
-    this.RepoHttpService.searchRepo(searchTerm).then(
-      (results)=>{
-        this.repos = this.RepoHttpService.repos;
-        console.log(this.repos)
-      },
-      (error)=>{
-        console.log(error)
-      }
-    )
-  }
+  constructor(public UserHttpService:UserHttpServiceService)  { }
+  // ,public RepoHttpService:RepoHttpServiceService-->
+  // searchRepo(searchTerm){
+  //   this.RepoHttpService.searchRepo(searchTerm).then(
+  //     (results)=>{
+  //       this.repos = this.RepoHttpService.repos;
+  //       console.log(this.repos)
+  //     },
+  //     (error)=>{
+  //       console.log(error)
+  //     }
+  //   )
+  // }
 
   
   searchUser(searchTerm){
     this.UserHttpService.searchUser(searchTerm).then(
       (results)=>{
         this.user = this.UserHttpService.user;
-        this.searchRepo(searchTerm)
+        // this.searchRepo(searchTerm)
       },
       (error)=>{
         console.log(error)

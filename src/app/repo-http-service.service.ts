@@ -8,7 +8,7 @@ import { Repository } from './repository';
 })
 export class RepoHttpServiceService {
 
-   repos: Repository;
+   gitrepos: Repository;
 
   constructor(private http:HttpClient) { }
 
@@ -17,7 +17,8 @@ export class RepoHttpServiceService {
       
        name: string,
         description: string, 
-        html_url: string, 
+        html_url: string,
+        url:string 
         
     }
 
@@ -26,9 +27,9 @@ export class RepoHttpServiceService {
     let promise = new Promise((resolve, reject)=>{
       this.http.get<Results>(searchEndpoint).toPromise().then(
         (results)=>{
-           this.repos = results;
+           this.gitrepos = results;
           
-          console.log(this.repos)
+          console.log(this.gitrepos)
           resolve()
         },
         (error)=>{

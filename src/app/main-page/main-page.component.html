@@ -15,6 +15,10 @@
       <div class="mb-4"> <i class="fa fa-calendar"></i> Joined On:{{user.created_at|date}}</div>
       <div class="mb-4"> <i class="fa fa-users"></i> Followers:{{user.followers}}</div>
       <div class="mb-4 pl-2"> <i class="fa fa-user"></i> Following:{{user.following}}</div>
+      <p appHighlight> <strong>Join Date:</strong> {{user.created_at |date}}</p>
+      <p><a href="{{user.html_url}}" target="_blank">
+        <button type="button" class="btn btn-dark"> View Profile on Github</button></a>
+          </p>
     </div>
   </div>
 </div>

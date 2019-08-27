@@ -1,16 +1,49 @@
-<h4>Repositories</h4>
+<!-- <app-input-search-form (emitSearch)="searchRepo($event)"></app-input-search-form>
+
+<h4>Repositories</h4> -->
+
+<!-- <app-input-search-form (emitSearch)="searchRepo($event)"></app-input-search-form> -->
 <!-- *ngFor="let repo of repos" -->
-<div class="container" >
-    <div class="col-md-4 card"  >
+<!-- <div class="container">
+    <div class="col-md-4 card" *ngFor="let repo of gitrepos">
         <div class="card-body">
-<h5 class="card-title">Name of the reposirory<!--{{repos.length}}--> </h5>
-<p class="card-body">Description of the repository<!--{{repos.description}}--></p>
-<p>Date Created</p>
-<div class="card-footer">
-        <i class="fa fa-github">CheckOut</i>
-    </div>
+            <h5 class="card-title">Name of the reposirory{{gitrepos.length}} </h5>
+            <p class="card-body">Description of the repository{{gitrepos.description}}</p>
+            <p>Date Created</p>
+            <div class="card-footer">
+                <i class="fa fa-github">CheckOut</i>
+            </div>
 
         </div>
     </div>
+</div> -->
 
-</div>
+
+
+  <div class="container">
+    <br>
+    <h4 class="text-center"> Github User Repositories Here!</h4>
+    <app-input-search-form (emitSearch)="searchRepo($event)"></app-input-search-form> 
+  </div>
+  
+  <h2 class="text-center"> REPOSITORIES </h2>
+  <div class="container card-columns">
+    <div class="card" *ngFor="let gitrepo of gitrepos">
+      <div class="card">
+        <div class="card-header">
+          <h2>{{gitrepo.name}}</h2>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><strong>Description: </strong>{{gitrepo.description}}</p>
+          <p class="card-text"><strong>Create at: </strong>{{gitrepo.created_at|date}}</p>
+          <p class="card-text"> <strong>Language: </strong> {{gitrepo.language}}.</p>
+  
+          <a href="{{gitrepo.html_url}}" target="_blank" class="btn btn-outline-dark btn-lg btn-block">Check it on Github</a> 
+        </div>
+        <div class="card-footer flex-footer">
+          <small class=""><strong>Branch: </strong>{{gitrepo.default_branch}} </small>
+          <small class="ml-4"><strong> Forks: </strong>{{gitrepo.forks_count}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
