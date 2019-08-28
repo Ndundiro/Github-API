@@ -14,7 +14,7 @@ The website has the following functionalities:
 * On pressing either user or repositories in the navbar,the corresponding informaion is dispalyed accordingly.
 
 ## Setup/Installation requirements
-Clone or download and unzip the repository from github, https://github.com/Ndundiro/gitfinder/. If you have git Use this command git clone * to clone the project. Run ng serve from your terminal Live Demo
+Clone or download and unzip the repository from github, https://github.com/Ndundiro/gitfinder/. If you have git Use this command git clone  to clone the project. Run ng serve from your terminal Live Demo
 
 To view the page click on the link below
 
